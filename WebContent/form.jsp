@@ -9,7 +9,7 @@
 <body>
 	<h3>회원가입</h3>
 	<!--  비번같은 경우에는 post방식으로 날려줘서 위에 안보이게 해줌 -->
-	<!--  get방식은 보여짐 -->
+	<!--  get방식은 보여짐 [jsp?다음부터 query String 이라고 부름]  -->
 	<form action ="/helloweb/join" method="post">
 		이메일 : <input type="text" name ="email" />
 		<br/>
@@ -35,8 +35,26 @@
 		</select>
 		<br/>
 		<br/>
+		취미:
+		<input type="checkbox" name="hobby" value = "sleeping"/>잠자기
+		<input type="checkbox" name="hobby" value = "reading"/>독서
+		<input type="checkbox" name="hobby" value = "swimming"/>수영
+		<input type="checkbox" name="hobby" value = "traving"/>여행
+		<br/>
+		<br/>
+		자기소개 : <!-- textarea> </ 끝내는 사이에 스페이스나 공백이 들어가 있으면 그렇게 들어가 있는 상태로 시작 -->
+		<textarea name = "self-intro" style ="width:300; height:300"></textarea>
+		<br/>
+		<br/>
 		<input type="submit" value="회원가입"/>
 	
 	</form>
 </body>
 </html>
+
+
+
+
+
+
+

@@ -23,11 +23,25 @@ public class joinServlet extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String birthYear = request.getParameter("birth-year");
 		
+		//같은이름으로 여러개 값을 받아올때쓰임
+		String[] hobbies = request.getParameterValues("hobby");
+		String selfIntro=request.getParameter("self-intro");
+		
 		System.out.println( email );
 		System.out.println(password);
 		System.out.println( name );
 		System.out.println(gender);
 		System.out.println(birthYear);
+		if(hobbies != null){
+		for( String hobby : hobbies){
+			System.out.println( hobby );
+		}
+		}
+		System.out.println(selfIntro);
+		
+		
+		
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
